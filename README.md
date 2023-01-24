@@ -58,6 +58,8 @@ Note: Before accessing these routes, the user must be logged in and the user's r
 
 execute in srcipt-retrieve-password the command
 
-node brute-force-user_paasword for the user
-node brute-force-admin_paasword for the admin
-node brute-force-ceo_paasword for the ceo
+node brute-force-user_password for the user
+
+node brute-force-admin_password for the admin
+
+node brute-force-ceo_password for the ceo
