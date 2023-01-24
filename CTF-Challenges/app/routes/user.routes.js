@@ -19,6 +19,12 @@ module.exports = function(app) {
   );
 
   app.get(
+    "/api/test/ceo",
+    [authJwt.verifyToken, authJwt.isCeo],
+    controller.ceoBoard
+  );
+
+  app.get(
     "/api/test/admin",
     [authJwt.verifyToken, authJwt.isAdmin],
     controller.adminBoard

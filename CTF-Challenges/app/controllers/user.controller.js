@@ -9,3 +9,7 @@ exports.allAccess = (req, res) => {
   exports.adminBoard = (req, res) => {
     res.status(200).send("Admin Content.");
   };
+
+  exports.ceoBoard = (req, res) => {
+    res.status(200).send("Ceo Content.");
+  };
