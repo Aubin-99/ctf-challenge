@@ -51,3 +51,13 @@ GET /api/test/admin
 This route is only accessible to logged-in users with the role of "admin". It returns a JSON object containing a message indicating that the user has successfully accessed the route.
 
 Note: Before accessing these routes, the user must be logged in and the user's role must be verified by the server.
+
+`
+
+## Retrieve password in database MYSQL
+
+execute in srcipt-retrieve-password the command
+
+node brute-force-user_paasword for the user
+node brute-force-admin_paasword for the admin
+node brute-force-ceo_paasword for the ceo
