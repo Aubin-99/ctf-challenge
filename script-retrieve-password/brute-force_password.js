@@ -4,7 +4,7 @@ const fs = require("fs");
 const axios = require("axios");
 const signinUrl = "http://localhost:8081/api/auth/signin";
 const commonPasswordsFile = "user_password.txt";
-const username = "Dupont";
+const username = "admin";
 
 fs.readFile(commonPasswordsFile, "utf8", (err, data) => {
   if (err) throw err;
